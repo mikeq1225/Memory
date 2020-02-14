@@ -22,8 +22,15 @@ class Game {
   start() {
     var startGame = ""
     this.game.hand.forEach(card => {
-      startGame += `<div class="cards">${card.face}</div>`
+      startGame += `<div class="cards">
+                      <div class="front">Front</div>
+                      <div class="back">${card.face}</div>
+                    </div>`
     })
     $(".playArea").html(startGame)
   }
 }
+// ;<div id="card">
+//   <div class="front">Front content</div>
+//   <div class="back">Back content</div>
+// </div>

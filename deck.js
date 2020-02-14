@@ -4,15 +4,15 @@ class Deck {
     this.deck = []
   }
   create() {
-    const cardValue = [1, 2, 3]
-    const cardDesign = ["A", "B"]
+    const cardValue = [1, 2, 3, 4, 5, 6]
+    // const cardDesign = ["A", "B"]
 
     cardValue.forEach(face => {
-      cardDesign.forEach(design => {
-        this.deck.push(new Card(face, design))
-        // this.deck.push(new Card(face, design))
-      })
+      // cardDesign.forEach(design => {
+      this.deck.push(new Card(face))
+      this.deck.push(new Card(face))
     })
+    // })
   }
 
   shuffle() {
