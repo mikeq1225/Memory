@@ -12,17 +12,37 @@ body {
   font-family: sans-serif;
 }
 
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
 .playArea {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 400px;
-  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px 10px;
+  width: 50%;
 }
 
 .cards {
-  /* width: 25px;
-  height: 25px; */
+  height: 200px;
+  width: 200px;
+}
+
+.front {
+  width: 200px;
+  height: 200px;
   border: 1px solid black;
-  border-radius: 4px;
-  margin: 1px;
+  border-radius: 15px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.back {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 50px;
+  text-align: center;
 }
