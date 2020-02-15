@@ -2,33 +2,64 @@ $(document).ready(function() {
   var memory = new Game()
   memory.createGame()
   memory.start()
-  memory.log()
-  $(".cards").flip()
-  var num1 = ""
-  var num2 = ""
-  $(".cards").on("click", ".front", function(e) {
+  var name1 = ""
+  var name2 = ""
+  $(".card").flip()
+  $(".playArea").on("click", ".card", function(e) {
     e.preventDefault()
 
-    //
-    value = $(this)
-      .find(" + .back")
-      .html()
-    if (num1 == "") {
-      num1 += value
-    } else if (num1 !== "") {
-      num2 += value
+    values = $(this).data("name")
+
+    if (name1 == "") {
+      name1 += values
+    } else if (name1 !== "") {
+      name2 += values
     }
-    if (num1 !== "" && num2 !== "" && num1 == num2) {
+    if (name1 !== "" && name2 !== "" && name1 == name2) {
       console.log("Match")
-      num1 = ""
-      num2 = ""
-    } else if (num1 !== "" && num2 !== "" && num1 !== num2) {
+
+      name1 = ""
+      name2 = ""
+    } else if (name1 !== "" && name2 !== "" && name1 !== name2) {
       console.log("Not a Match")
-      num1 = ""
-      num2 = ""
+
+      name1 = ""
+      name2 = ""
     }
 
-    console.log(num1)
-    console.log(num2)
+    console.log(name1)
+    console.log(name2)
   })
 })
+
+//
+// var values = $(this)
+//   .find("+ .back")
+//   .getAttribute("user-id")
+
+// $(".cardPaused").off(".flip")
+
+// $(this)
+//   .parent()
+//   .off(".flip")
+// $(this)
+//   .parents()
+//   .addClass("cardFlipped")
+
+// setTimeout(function() {
+//   $(this)
+//     .parent()
+//     .off(".flip")
+//   $(this)
+//     .find("+ .back")
+//     .data("name")
+//     .off(".flip")
+// }, 2000)
+
+// setTimeout(function() {
+//   $(this).removeClass("cardFlipped")
+//   $(this)
+//     .find("+ .back")
+//     .data("name")
+//     .removeClass("cardFlipped")
+// }, 2000)

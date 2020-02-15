@@ -1,7 +1,6 @@
 class Card {
-  constructor(face, design) {
-    this.face = face
-    // this.design = design
-    this.value = face
+  constructor(face, name) {
+    this.image = face
+    this.name = name
   }
 }
