@@ -15,16 +15,13 @@ class Game {
       this.game.recieveCard(card)
     })
   }
-  log() {
-    console.log(this.game.hand)
-  }
 
   start() {
     var startGame = ""
     this.game.hand.forEach(card => {
-      startGame += `<div class="cards">
-                      <div class="front">Front</div>
-                      <div class="back">${card.face}</div>
+      startGame += `<div class="card" data-name="${card.name}">
+                      <div class="front"></div>
+                      <div  class="back"><img class="superman"  src="${card.image}"></div>
                     </div>`
     })
     $(".playArea").html(startGame)
