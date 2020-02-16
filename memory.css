@@ -17,9 +17,13 @@ body {
   margin: auto;
 }
 
+h3 {
+  text-align: center;
+}
+
 .playArea {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px 10px;
   width: 50%;
 }
@@ -52,4 +56,17 @@ body {
   border-radius: 15px;
   font-size: 50px;
   text-align: center;
+  background-color: rgb(33, 127, 190);
+}
+
+.lose {
+  height: 500px;
+  width: 100%;
+  background-color: rgb(33, 127, 190);
+}
+
+.win {
+  height: 500px;
+  width: 100%;
+  background-color: rgb(33, 127, 190);
 }

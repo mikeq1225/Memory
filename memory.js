@@ -27,7 +27,3 @@ class Game {
     $(".playArea").html(startGame)
   }
 }
-// ;<div id="card">
-//   <div class="front">Front content</div>
-//   <div class="back">Back content</div>
-// </div>
