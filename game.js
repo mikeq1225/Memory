@@ -4,11 +4,16 @@ $(document).ready(function() {
   var name2 = null
   var guesses = null
   var matches = null
+  $(".playArea").css("display", "block").html(`<div class="start">
+                        <h1>The World Needs You!<h1>
+                        <h2>Do you have what it takes to help Superman beat Lex Luthor?<h2><h2>Press the start button and use your memory skills to help save the world.
+                      </div>`)
+  //
   $(".aroundStart").on("click", function(e) {
     e.preventDefault()
     $("body")
-      .removeClass("backImage2")
-      .addClass("backImage1")
+      .removeClass("backImage2 backImage1")
+      .addClass("backImage3")
     $("#guesses")
       .removeClass("guesses2")
       .addClass("guesses")
@@ -18,8 +23,9 @@ $(document).ready(function() {
     $("#startGame")
       .removeClass("startGame2")
       .addClass("startGame")
-
-    $(".playArea").css("display", "grid")
+    $(".playArea")
+      .css("display", "grid")
+      .removeClass("start")
     memory = new Game()
     memory.createGame()
     memory.start()
@@ -50,9 +56,15 @@ $(document).ready(function() {
         matches++
         if (matches === 10) {
           setTimeout(function() {
+            $("body")
+              .removeClass("backImage3")
+              .addClass("backImage1")
+            $("#guesses")
+              .removeClass("guesses")
+              .addClass("guesses2")
             $(".playArea").css("display", "block").html(`<div class="win">
                                 <h1>Congratulations<h1>
-                                <h2>You proved your self to be a valuable resource to the <strong>Justice League</strong!<h2>
+                                <h2>You saved the world from the evil Lex Luthor and have proven yourself to be a valuable member of the <strong>Justice League</strong><h2>
                                 <h1>Game Over<h1>
                               </div>`)
           }, 1500)
@@ -75,7 +87,7 @@ $(document).ready(function() {
               .removeClass("guesses")
               .addClass("guesses2")
             $("body")
-              .removeClass("backImage1")
+              .removeClass("backImage3")
               .addClass("backImage2")
             $(".playArea").css("display", "block").html(`<div class="lose">
                                     <h1>Thank you<h1>

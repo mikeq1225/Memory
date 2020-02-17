@@ -14,9 +14,9 @@ body {
 }
 .backImage1 {
   background-image: url(assets/supermanFrontPage.jpg);
-  background-position: 100% 0%;
+  background-size: cover;
   background-repeat: no-repeat;
-  transition: 2s;
+  transition: 4s;
 }
 
 .backImage2 {
@@ -24,6 +24,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   transition: 4s;
+}
+
+.backImage3 {
+  background-image: url(assets/supermanVSluthor.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 2s;
 }
 
 .container {
@@ -53,22 +60,27 @@ body {
   color: rgb(251, 4, 24);
   padding: 2px;
   outline: none;
-  transition: 2s;
 }
 
 .guesses {
   text-align: center;
-  color: rgb(3, 103, 189);
-  text-shadow: 0px 6px 7px whitesmoke;
+  letter-spacing: 1.5px;
+  color: rgb(255, 253, 46);
+  text-shadow: 0px 10px 8px rgb(3, 103, 189);
   margin: 15px;
   font-size: 30px;
 }
 
+.guesses2 {
+  display: none;
+}
+
 .playArea {
   display: grid;
-
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px 10px;
+  margin-bottom: 40px;
+  transition: 2s;
 }
 
 .card {
@@ -112,11 +124,13 @@ body {
 }
 
 .lose h1,
-.win h1 {
+.win h1,
+.start h1 {
   font-size: 45px;
 }
 .lose h2,
-.win h2 {
+.win h2,
+.start h2 {
   font-size: 30px;
 }
 
@@ -154,10 +168,11 @@ body {
   transition-timing-function: linear;
 }
 
-.guesses2 {
+.start {
+  display: block;
+  margin-top: 165px;
   text-align: center;
-  color: purple;
-  text-shadow: 0px 6px 7px whitesmoke;
-  margin: 15px;
-  font-size: 30px;
+  letter-spacing: 2px;
+  color: rgb(255, 253, 46);
+  text-shadow: 0px 10px 8px rgb(3, 103, 189);
 }
