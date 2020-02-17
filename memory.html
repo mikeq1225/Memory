@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Memory Game</title>
+    <title>Superman Memory Game</title>
     <link rel="stylesheet" type="text/css" href="./memory.css" />
   </head>
-  <body>
+  <body class="backImage1">
     <div class="container">
-      <h3 id="guesses">Guesses remaining: 20</h3>
-      <div class="playArea"></div>
+      <div id="aroundStart" class="aroundStart">
+        <button id="startGame" class="startGame">Start Game</button>
+      </div>
+      <div>
+        <h3 id="guesses" class="guesses"></h3>
+        <div class="playArea"></div>
+      </div>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
