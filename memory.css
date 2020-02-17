@@ -10,22 +10,65 @@ html {
 
 body {
   font-family: sans-serif;
+  margin: 0;
+}
+.backImage1 {
+  background-image: url(assets/supermanFrontPage.jpg);
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  transition: 2s;
+}
+
+.backImage2 {
+  background-image: url(assets/lexLuthor.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 4s;
 }
 
 .container {
-  width: 1000px;
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
-h3 {
+.aroundStart {
+  background-color: rgb(3, 103, 189);
+  border: 5px solid rgb(251, 4, 24);
+  border-radius: 13px;
+  padding: 10px 15px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s;
+}
+
+.startGame {
+  border-radius: 7px;
+  font-size: 31px;
+  background-color: rgb(255, 253, 46);
+  border: 3px solid rgb(251, 4, 24);
+  color: rgb(251, 4, 24);
+  padding: 2px;
+  outline: none;
+  transition: 2s;
+}
+
+.guesses {
   text-align: center;
+  color: rgb(3, 103, 189);
+  text-shadow: 0px 6px 7px whitesmoke;
+  margin: 15px;
+  font-size: 30px;
 }
 
 .playArea {
   display: grid;
+
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px 10px;
-  width: 50%;
 }
 
 .card {
@@ -41,32 +84,80 @@ h3 {
 .front {
   width: 200px;
   height: 200px;
-  border: 1px solid black;
+  border: 2px solid rgb(3, 103, 189);
   border-radius: 15px;
   font-size: 50px;
   text-align: center;
-  background-color: red;
+  background-color: rgb(251, 4, 24);
   background-image: url(assets/superman.png);
 }
 
 .back {
   width: 200px;
   height: 200px;
-  border: 1px solid black;
+  border: 2px solid rgb(3, 103, 189);
   border-radius: 15px;
   font-size: 50px;
   text-align: center;
-  background-color: rgb(33, 127, 190);
+  background-color: rgb(3, 103, 189);
 }
 
 .lose {
-  height: 500px;
-  width: 100%;
-  background-color: rgb(33, 127, 190);
+  display: block;
+  text-align: center;
+  margin-top: 210px;
+  letter-spacing: 2px;
+  color: whitesmoke;
+  text-shadow: 0px 10px 8px purple;
+}
+
+.lose h1,
+.win h1 {
+  font-size: 45px;
+}
+.lose h2,
+.win h2 {
+  font-size: 30px;
 }
 
 .win {
-  height: 500px;
-  width: 100%;
-  background-color: rgb(33, 127, 190);
+  display: block;
+  margin-top: 165px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: rgb(255, 253, 46);
+  text-shadow: 0px 10px 8px rgb(3, 103, 189);
+}
+
+.aroundStart2 {
+  background-color: purple;
+  border: 5px solid green;
+  border-radius: 13px;
+  padding: 10px 15px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 2s;
+  transition-timing-function: linear;
+}
+
+.startGame2 {
+  border-radius: 7px;
+  font-size: 31px;
+  background-color: purple;
+  border: 3px solid green;
+  color: whitesmoke;
+  padding: 2px;
+  outline: none;
+  transition: 2s;
+  transition-timing-function: linear;
+}
+
+.guesses2 {
+  text-align: center;
+  color: purple;
+  text-shadow: 0px 6px 7px whitesmoke;
+  margin: 15px;
+  font-size: 30px;
 }
